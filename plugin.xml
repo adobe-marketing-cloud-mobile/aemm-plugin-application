@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="aemm-plugin-application"
+    version="1.1.1">
+    <name>AEMM Application Plugin</name>
+    <description>AEMM Application Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,application,aem,aemm,aemmobile</keywords>
+    <repo>https://github.com/adobe-marketing-cloud-mobile/aemm-plugin-application.git</repo>
+
+	<js-module src="www/CQMApplication.js" name="cq.mobile.application">
+		<clobbers target="cq.mobile.application" />
+	</js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CQMApplication">
+                <param name="ios-package" value="CQMApplication"/>
+            </feature>
+        </config-file>
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CQMApplication" >
+                <param name="android-package" value="com.adobe.dps.viewer.extensibility.application.CQMApplication"/>
+            </feature>
+        </config-file>
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/CQMApplicationProxy.js" name="CQMApplicationProxy">
+            <runs />
+        </js-module>
+    </platform>
+
+</plugin>
