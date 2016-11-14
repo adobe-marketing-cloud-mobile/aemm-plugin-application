@@ -20,6 +20,9 @@
 -->
 # Release Notes
 
+### 1.2.0 (Nov 14, 2016)
+* Expose two new fields: isSocialSharingEnabled and isAppSearchEnabled.
+
 ### 1.1.1 (May 19, 2016)
 * First public release
 
