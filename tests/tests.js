@@ -50,7 +50,17 @@ exports.defineAutoTests = function() {
     it("should contain a pushNotificationToken that is a string", function() {
       expect(window.application.pushNotificationToken).toBeDefined();
     });
-
+    
+    it("should contain an isSocialSharingEnabled property that is a boolean", function() {
+      expect(window.application.isSocialSharingEnabled).toBeDefined();
+      expect(typeof window.application.isSocialSharingEnabled).toBe("boolean");
+    });
+    
+    it("should contain an isAppSearchEnabled property that is a boolean", function() {
+      expect(window.application.isAppSearchEnabled).toBeDefined();
+      expect(typeof window.application.isAppSearchEnabled).toBe("boolean");
+    });
+    
   });
 };
 

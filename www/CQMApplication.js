@@ -41,6 +41,8 @@ function CQMApplication() {
     this.version = null;
     this.runtimeVersion = null;
     this.pushNotificationToken = null;
+    this.isSocialSharingEnabled = false;
+    this.isAppSearchEnabled = false;
 
     //initialize with data from native
     this.getApplicationInfo(this._initialize.bind(this), this._error);
@@ -52,6 +54,8 @@ CQMApplication.prototype._initialize = function(info) {
     this.version = info.version;
     this.runtimeVersion = info.runtimeVersion;
     this.pushNotificationToken = info.pushNotificationToken;
+    this.isSocialSharingEnabled = info.isSocialSharingEnabled; 
+    this.isAppSearchEnabled = info.isAppSearchEnabled;
 
    cordova.exec(this._updateProperties.bind(this), this._error, "CQMApplication", "watchApplicationInfo", []);
    channel.onCordovaAppInfoReady.fire();

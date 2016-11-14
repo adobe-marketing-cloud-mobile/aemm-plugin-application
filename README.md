@@ -37,6 +37,8 @@ cordova plugin add aemm-plugin-application
 - application.version
 - application.runtimeVersion
 - application.pushNotificationToken
+- isSocialSharingEnabled
+- isAppSearchEnabled
 
 ## Document Events
 - pushnotificationtokenchanged
