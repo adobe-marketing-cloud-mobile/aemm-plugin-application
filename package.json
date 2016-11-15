@@ -1,6 +1,6 @@
 {
   "name": "aemm-plugin-application",
-  "version": "1.2.0",
+  "version": "1.2.1-dev",
   "description": "AEMM Application Plugin",
   "cordova": {
     "id": "aemm-plugin-application",
